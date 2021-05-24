@@ -1,0 +1,9 @@
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/products">Products</a>
+</nav>
+
+<button (click)="setValue(true)" class="button"> Supplier products display</button>
+<div *ngIf="data"><app-supplier (newItemEvent)="addItem($event)" (newFlagEvent)="addFlag($event)" ></app-supplier></div>
+<app-buyer [product]="products" [flag]="flag"></app-buyer>
+<router-outlet></router-outlet>

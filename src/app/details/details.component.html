@@ -1,0 +1,8 @@
+<div *ngIf="selectedproduct">
+    <h2>{{selectedproduct.name|uppercase}} details</h2>
+    <div class="divClass"><span class="spanClass">ID:  </span>{{selectedproduct.id}}</div><br>
+    <div class="divClass"><span class="spanClass">Name:  </span>{{selectedproduct.name}}</div><br>
+    <div>
+        <label class="spanClass">Cost:  <input class="divClass" (ngModelChange)="changeCost($event)" [(ngModel)]="selectedproduct.cost"></label>
+    </div>
+    </div>
